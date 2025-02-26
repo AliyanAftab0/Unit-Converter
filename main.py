@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Unit Converter", page_icon="⚖️", layout="centered")
 
 # Set page title
-st.title("Unit Converter")
+st.title("Unit Converter ⚖️")
 
 # Dropdown for unit types
 unit_type = st.selectbox("Select Unit Type", ["Length"])
@@ -53,10 +53,14 @@ if unit_type == "Length":
         result = 0.0
 
 # Display result
-if st.button("Convert"):
+if st.button("Convert ⚖️"):
     if value < 0:
         st.error("Value cannot be negative. Please enter a positive number.")
     elif result == 0.0:
         st.warning("Conversion failed. Please check your inputs.")
     else:
         st.success(f"**Result:** {value:.2f} {from_unit} = {result:.6f} {to_unit}")
+
+st.markdown("---")
+
+st.write("Developed by Aliyan Aftab using Streamlit")
